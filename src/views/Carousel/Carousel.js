@@ -1,7 +1,7 @@
 import React from 'react';
 import { Prompt } from 'react-router-dom';
 
-class NavTtem3 extends React.Component {
+class Carousel extends React.Component {
   constructor(...args) {
     super(...args)
     this.state = {
@@ -25,4 +25,4 @@ class NavTtem3 extends React.Component {
   }
 }
 
-export default NavTtem3;
+export default Carousel;

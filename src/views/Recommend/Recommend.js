@@ -1,13 +1,13 @@
 import React from 'react';
 
-class NavTtem2 extends React.Component {
+class Recommend extends React.Component {
   componentWillMount() {
     console.log(this.props);
   }
   render() {
     return (
       <div className="Nav">
-        2222页
+        Recommend
       <p>
           参数：
         {this.props.match.params.id}，
@@ -18,4 +18,4 @@ class NavTtem2 extends React.Component {
   }
 }
 
-export default NavTtem2;
+export default Recommend;
