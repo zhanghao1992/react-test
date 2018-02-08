@@ -7,7 +7,7 @@ class Carousel extends React.Component {
   constructor(...args) {
     super(...args);
     this.state = {
-      title: 'city'
+      title: '23234'
     }
   }
 
