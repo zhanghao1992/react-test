@@ -2,33 +2,24 @@ require('normalize.css/normalize.css');
 require('styles/App.css');
 
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect, NavLink } from 'react-router-dom';
-import List from '../views/List/List';
-import Recommend from '../views/Recommend/Recommend';
-import Carousel from '../views/Carousel/Carousel';
-import NoMatch from '../views/NoMatch/NoMatch';
+import PureRenderMixin from 'react-addons-pure-render-mixin';
+import RouterMap from '../router/RouterMap';
+import Header from '../components/Header/Header';
 
 class AppComponent extends React.Component {
+  mixins: [PureRenderMixin]
+
+  constructor(...args) {
+    super(...args);
+    this.state = {
+      title: 'list'
+    }
+  }
   render() {
     return (
       <div className="index">
-        <Router>
-          <div>
-            <div>
-              <NavLink exact className="green" activeClassName="act" to="/">List | </NavLink>
-              <NavLink to="/list" activeClassName="act">Recommend  |</NavLink>
-              <NavLink to="/recommend" activeClassName="act">Carousel  |</NavLink>
-              <NavLink to="/redirect" activeClassName="act">redirect  |</NavLink>
-            </div>
-            <Switch>
-              <Route exact path="/" component={List} />
-              <Route exact path="/recommend" component={Recommend} />
-              <Route exact path="/carousel" component={Carousel} />
-              <Redirect from="/list" to="/" />
-              <Route component={NoMatch} />
-            </Switch>
-          </div>
-        </Router >
+        <Header />
+        <RouterMap />
       </div>
     );
   }

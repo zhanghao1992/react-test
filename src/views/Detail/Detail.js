@@ -1,7 +1,7 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 
-class NoMatch extends React.Component {
+class Search extends React.Component {
   mixins: [PureRenderMixin]
 
   constructor(...args) {
@@ -14,10 +14,15 @@ class NoMatch extends React.Component {
   render() {
     return (
       <div className="Nav">
-        NoMatch
+        Search
+      <p>
+          参数：
+        {this.props.match.params.id}，
+        {this.props.match.params.name}
+        </p>
       </div>
     );
   }
 }
 
-export default NoMatch;
+export default Search;
