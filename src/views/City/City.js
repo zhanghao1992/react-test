@@ -7,15 +7,14 @@ class Carousel extends React.Component {
   constructor(...args) {
     super(...args);
     this.state = {
-      title: 'list'
+      title: 'city'
     }
   }
 
   render() {
     return (
       <div className="Nav">
-        <p>333333</p>
-        <button onClick={this.changePower}>启用提示</button>
+        <p>{this.state.title}</p>
       </div>
     );
   }
