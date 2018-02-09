@@ -3,7 +3,7 @@ import PureRenderMixin from 'react-addons-pure-render-mixin'
 import { connect } from 'react-redux'
 
 class Header extends React.Component {
-    mixins: [PureRenderMixin]
+    mixins: ['PureRenderMixin']
 
     constructor(...args) {
         super(...args)
