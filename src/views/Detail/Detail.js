@@ -1,11 +1,11 @@
-import React from 'react';
-import PureRenderMixin from 'react-addons-pure-render-mixin';
+import React from 'react'
+import PureRenderMixin from 'react-addons-pure-render-mixin'
 
 class Search extends React.Component {
   mixins: [PureRenderMixin]
 
   constructor(...args) {
-    super(...args);
+    super(...args)
     this.state = {
       title: 'list'
     }
@@ -21,8 +21,8 @@ class Search extends React.Component {
         {this.props.match.params.name}
         </p>
       </div>
-    );
+    )
   }
 }
 
-export default Search;
+export default Search

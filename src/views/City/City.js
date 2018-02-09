@@ -1,11 +1,11 @@
-import React from 'react';
-import PureRenderMixin from 'react-addons-pure-render-mixin';
+import React from 'react'
+import PureRenderMixin from 'react-addons-pure-render-mixin'
 
 class Carousel extends React.Component {
   mixins: [PureRenderMixin]
 
   constructor(...args) {
-    super(...args);
+    super(...args)
     this.state = {
       title: '23234'
     }
@@ -16,8 +16,8 @@ class Carousel extends React.Component {
       <div className="Nav">
         <p>{this.state.title}</p>
       </div>
-    );
+    )
   }
 }
 
-export default Carousel;
+export default Carousel

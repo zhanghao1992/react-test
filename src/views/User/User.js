@@ -1,18 +1,18 @@
-import React from 'react';
-import PureRenderMixin from 'react-addons-pure-render-mixin';
+import React from 'react'
+import PureRenderMixin from 'react-addons-pure-render-mixin'
 
 class Recommend extends React.Component {
   mixins: [PureRenderMixin]
 
   constructor(...args) {
-    super(...args);
+    super(...args)
     this.state = {
       title: 'list'
     }
   }
 
   componentWillMount() {
-    console.log(this.props);
+    console.log(this.props)
   }
   render() {
     return (
@@ -24,8 +24,8 @@ class Recommend extends React.Component {
         {this.props.match.params.name}
         </p>
       </div>
-    );
+    )
   }
 }
 
-export default Recommend;
+export default Recommend

@@ -1,11 +1,11 @@
-import React from 'react';
-import PureRenderMixin from 'react-addons-pure-render-mixin';
+import React from 'react'
+import PureRenderMixin from 'react-addons-pure-render-mixin'
 
 class List extends React.Component {
   mixins: [PureRenderMixin]
 
   constructor(...args) {
-    super(...args);
+    super(...args)
     this.state = {
       title: 'list'
     }
@@ -16,8 +16,8 @@ class List extends React.Component {
       <div className="Nav">
         {this.state.title}
       </div>
-    );
+    )
   }
 }
 
-export default List;
+export default List
