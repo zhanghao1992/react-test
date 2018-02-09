@@ -25,11 +25,13 @@ class AppComponent extends React.Component {
   }
   componentDidMount() {
     // localstorage 获取城市
-    console.log(this.props)
     let cityName = LocalStorage.getItem('CITYNAME')
     if (cityName == null) {
       cityName = '北京'
     }
+    this.props.userInfoActions.update({
+      cityName: cityName
+    })
 
     // 将城市存入 redux
     // setTimeout(() => {
@@ -59,13 +61,13 @@ AppComponent.defaultProps = {
 
 // -------------------redux react 绑定--------------------
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     userInfo: state.userInfo
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
     userInfoActions: bindActionCreators(userInfoActions, dispatch)
   }
