@@ -1,23 +1,24 @@
 import React from 'react'
-import PureRenderMixin from 'react-addons-pure-render-mixin'
+// import PureRenderMixin from 'react-addons-pure-render-mixin'
+import Calculator from './Calculator'
 
-class List extends React.Component {
-  mixins: [PureRenderMixin]
+class Home extends React.Component {
 
-  constructor(...args) {
-    super(...args)
+  constructor(props) {
+    super(props)
     this.state = {
-      title: 'list'
+      title: 'home'
     }
   }
 
   render() {
     return (
-      <div className="Nav">
+      <div>
         {this.state.title}
+        <Calculator/>
       </div>
     )
   }
 }
 
-export default List
+export default Home
