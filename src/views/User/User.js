@@ -7,7 +7,7 @@ class Recommend extends React.Component {
   constructor(...args) {
     super(...args)
     this.state = {
-      title: 'list'
+      title: 'user'
     }
   }
 
