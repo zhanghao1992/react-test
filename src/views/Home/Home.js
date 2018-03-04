@@ -1,6 +1,6 @@
 import React from 'react'
 // import PureRenderMixin from 'react-addons-pure-render-mixin'
-import Calculator from './Calculator'
+// import Calculator from './Calculator'
 
 class Home extends React.Component {
 
@@ -15,7 +15,7 @@ class Home extends React.Component {
     return (
       <div>
         {this.state.title}
-        <Calculator/>
+        {/* <Calculator/> */}
       </div>
     )
   }
