@@ -15,10 +15,12 @@ import Header from '../components/Header/Header'
 // // 创建 Redux 的 store 对象
 // const store = configureStore()
 class AppComponent extends React.Component {
-  mixins: [PureRenderMixin]
 
   constructor(...args) {
     super(...args)
+    this.shouldComponentUpdate = PureRenderMixin
+    .shouldComponentUpdate
+    .bind(this)
     this.state = {
       initDone: true
     }
