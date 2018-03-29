@@ -1,7 +1,6 @@
 import React from 'react'
 
 class NoMatch extends React.Component {
-
   constructor(...args) {
     super(...args)
     this.state = {
