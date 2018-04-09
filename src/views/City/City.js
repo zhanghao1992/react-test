@@ -4,9 +4,6 @@ class Carousel extends React.Component {
 
   constructor(...args) {
     super(...args)
-    // this.shouldComponentUpdate = PureRenderMixin
-    //   .shouldComponentUpdate
-    //   .bind(this)
     this.state = {
       title: 'city'
     }
