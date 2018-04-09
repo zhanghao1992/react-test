@@ -33,11 +33,18 @@ let config = Object.assign({}, baseConfig, {
 // Add needed loaders to the defaults here
 config.module.loaders.push({
   test: /\.(js|jsx)$/,
-  loader: 'react-hot!babel-loader',
+  loader: require.resolve('babel-loader'),
   include: [].concat(
     config.additionalPaths,
     [path.join(__dirname, '/../src')]
-  )
+  ),
+  options: {
+    // This is a feature of `babel-loader` for Webpack (not Babel itself).
+    // It enables caching results in ./node_modules/.cache/babel-loader/
+    // directory for faster rebuilds.
+    cacheDirectory: true,
+    plugins: ['react-hot-loader/babel']
+  }
 })
 
 module.exports = config
